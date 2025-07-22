@@ -1430,7 +1430,7 @@ engines:
   - name: mullvadleta brave
     engine: mullvad_leta
     network: mullvadleta
-    disabled: false
+    disabled: true
     leta_engine: brave
     categories: [general, web]
     shortcut: mlb

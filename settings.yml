@@ -94,7 +94,7 @@ server:
   # If your instance owns a /etc/searxng/settings.yml file, then set the following
   # values there.
 
-  secret_key: "ultrasecretkey"  # Is overwritten by ${SEARXNG_SECRET}
+  secret_key: "k5iWNa4qLtVtLu68JZDjXsB1InnSRHl2"  # Is overwritten by ${SEARXNG_SECRET}
   # Proxy image results through SearXNG. Is overwritten by ${SEARXNG_IMAGE_PROXY}
   image_proxy: false
   # 1.0 and 1.1 are supported
@@ -529,7 +529,7 @@ engines:
   - name: bing
     engine: bing
     shortcut: bi
-    disabled: true
+    disabled: false
 
   - name: bing images
     disabled: true
@@ -576,7 +576,6 @@ engines:
     disabled: true
 
   - name: btdigg
-    disabled: true
     engine: btdigg
     shortcut: bt
     disabled: true
@@ -722,6 +721,7 @@ engines:
     timeout: 3.0
 
   - name: devicons
+    disabled: true
     engine: devicons
     shortcut: di
     timeout: 3.0
@@ -857,7 +857,6 @@ engines:
     disabled: true
 
   - name: tineye
-    disabled: true
     engine: tineye
     shortcut: tin
     timeout: 9.0
@@ -1268,7 +1267,6 @@ engines:
     inactive: true
 
   - name: library of congress
-    disabled: true
     engine: loc
     shortcut: loc
     categories: images
@@ -2607,7 +2605,6 @@ engines:
     disabled: true
 
   - name: wallhaven
-    disabled: true
     engine: wallhaven
     # api_key: abcdefghijklmnopqrstuvwxyz
     shortcut: wh

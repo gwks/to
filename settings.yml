@@ -473,6 +473,12 @@ engines:
     shortcut: arc
     timeout: 4.0
 
+  - name: artstation
+    engine: artstation
+    shortcut: as
+    categories: images
+    disabled: true
+
   - name: arxiv
     engine: arxiv
     shortcut: arx
@@ -537,7 +543,7 @@ engines:
   - name: bing
     engine: bing
     shortcut: bi
-    disabled: false
+    disabled: true
 
   - name: bing images
     disabled: true
@@ -1346,6 +1352,7 @@ engines:
       results: HTML
 
   - name: lucide
+    disabled: true
     engine: lucide
     shortcut: luc
     timeout: 3.0
@@ -1682,7 +1689,7 @@ engines:
       - https://pximg.example.org
       # A proxy is required to load the images. Hosting an image proxy server
       # for Pixiv:
-      #    --> https://pixivfe.pages.dev/hosting-image-proxy-server/
+      #    --> https://pixivfe-docs.pages.dev/hosting/image-proxy-server/
       # Proxies from public instances.  Ask the public instances owners if they
       # agree to receive traffic from SearXNG!
       #    --> https://codeberg.org/VnPower/PixivFE#instances
@@ -2469,6 +2476,11 @@ engines:
     shortcut: mp
     disabled: true
 
+  - name: national vulnerability database
+    engine: nvd
+    shortcut: nvd
+    disabled: true
+
   - name: naver
     categories: [general, web]
     engine: naver
@@ -2681,6 +2693,13 @@ engines:
     engine: wttr
     shortcut: wttr
     timeout: 9.0
+
+  - name: braveapi
+    disabled: true
+    engine: braveapi
+    # read https://docs.searxng.org/dev/engines/online/brave.html
+    api_key: ""
+    inactive: true
 
   - name: brave
     disabled: true

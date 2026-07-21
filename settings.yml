@@ -106,7 +106,7 @@ server:
   # Proxy image results through SearXNG. Is overwritten by ${SEARXNG_IMAGE_PROXY}
   image_proxy: false
   # 1.0 and 1.1 are supported
-  http_protocol_version: "1.1"
+  http_protocol_version: "1.0"
   # POST queries are "more secure!" but are also the source of hard-to-locate
   # annoyances, which is why GET may be better for end users and their browsers.
   # see https://github.com/searxng/searxng/pull/3619
@@ -180,7 +180,7 @@ outgoing:
   # to the administrator
   useragent_suffix: ""
   # The maximum number of concurrent connections that may be established.
-  pool_connections: 100
+  pool_connections: 200
   # Allow the connection pool to maintain keep-alive connections below this
   # point.
   pool_maxsize: 20

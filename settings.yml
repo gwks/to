@@ -21,7 +21,7 @@ brand:
   docs_url: https://docs.searxng.org/
   public_instances: https://searx.space
   wiki_url: https://github.com/searxng/searxng/wiki
-  issue_url: https://github.com/paulgoio/searxng/issues
+  issue_url: https://github.com/searxng/searxng/issues
   # custom:
   #   # Custom entries in the footer: [title]: [link]
   #   links:
@@ -102,7 +102,7 @@ server:
   # If your instance owns a /etc/searxng/settings.yml file, then set the following
   # values there.
 
-  secret_key: "eY6cDJRoPIXq9hwq4Gg0vYL9uVPi3"  # Is overwritten by ${SEARXNG_SECRET}
+  secret_key: "ultrasecretkey"  # Is overwritten by ${SEARXNG_SECRET}
   # Proxy image results through SearXNG. Is overwritten by ${SEARXNG_IMAGE_PROXY}
   image_proxy: false
   # 1.0 and 1.1 are supported

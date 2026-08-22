@@ -102,7 +102,7 @@ server:
   # If your instance owns a /etc/searxng/settings.yml file, then set the following
   # values there.
 
-  secret_key: "ultrasecretkey"  # Is overwritten by ${SEARXNG_SECRET}
+  secret_key: "fPEMZHKZId0z3FArOFI4IPrnjTmTUk"  # Is overwritten by ${SEARXNG_SECRET}
   # Proxy image results through SearXNG. Is overwritten by ${SEARXNG_IMAGE_PROXY}
   image_proxy: false
   # 1.0 and 1.1 are supported
@@ -764,6 +764,7 @@ engines:
     engine: deviantart
     shortcut: da
     timeout: 3.0
+    inactive: true
 
   - name: devicons
     disabled: true
@@ -1231,12 +1232,12 @@ engines:
   - name: google
     engine: google
     shortcut: go
-    inactive: true
+    disabled: true
 
   - name: google images
     engine: google_images
     shortcut: goi
-    inactive: true
+    disabled: true
 
   - name: google news
     engine: google_news
@@ -1246,7 +1247,6 @@ engines:
     disabled: true
     engine: google_videos
     shortcut: gov
-    inactive: true
 
   - name: google cse
     engine: google_cse
@@ -2612,6 +2612,16 @@ engines:
     search_type: images
     shortcut: ydi
     disabled: true
+
+  - name: yandex api
+    engine: yandex_api
+    categories: [general, web]
+    shortcut: yda
+    inactive: true
+    # api_key: ""
+    # folder_id: ""
+    # search_type: SEARCH_TYPE_COM
+    # l10n: LOCALIZATION_EN
 
   - name: yandex music
     engine: yandex_music

@@ -277,6 +277,7 @@ plugins:
 categories_as_tabs:
   general:
   images:
+  # stock_images:
   videos:
   news:
   map:
@@ -301,7 +302,6 @@ engines:
   - name: 500px
     engine: 500px
     shortcut: "500"
-    disabled: true
     timeout: 5
 
   - name: 9gag
@@ -931,7 +931,6 @@ engines:
     engine: www1x
     shortcut: 1x
     timeout: 3.0
-    disabled: true
 
   - name: fastbot
     engine: xpath
@@ -1017,7 +1016,6 @@ engines:
 
   - name: flickr
     disabled: true
-    categories: images
     shortcut: fl
     engine: flickr_noapi
 
@@ -1227,7 +1225,7 @@ engines:
 
   - name: google play apps
     engine: google_play
-    categories: [files, apps]
+    categories: [it, apps]
     shortcut: gpa
     play_categ: apps
     disabled: true
@@ -1533,12 +1531,6 @@ engines:
     # https://github.com/searxng/searxng/issues/3610
     inactive: true
 
-  - name: library of congress
-    engine: loc
-    shortcut: loc
-    categories: images
-    disabled: true
-
   - name: libretranslate
     engine: libretranslate
     # https://github.com/LibreTranslate/LibreTranslate?tab=readme-ov-file#mirrors
@@ -1547,6 +1539,25 @@ engines:
     # api_key: ''
     shortcut: lt
     inactive: true
+
+  - name: littlelayer
+    engine: json_engine
+    shortcut: ll
+    categories: [general, blogs]
+    paging: false
+    search_url: https://litterlayer.com/load_results/?q={query}&page={pageno}
+    headers:
+      X-Requested-With: XMLHttpRequest
+    results_query: results
+    url_query: url
+    title_query: title
+    content_query: description
+    disabled: true
+    inactive: true
+    about:
+      website: https://littlelayer.com
+      description: Indie search and bookmarking community
+      results: JSON
 
   - name: lingva
     disabled: true
@@ -1900,7 +1911,6 @@ engines:
   - name: picjumbo
     engine: picjumbo
     shortcut: pj
-    disabled: true
 
   - name: pinterest
     engine: pinterest
@@ -1943,7 +1953,7 @@ engines:
   - name: pixabay images
     engine: pixabay
     pixabay_type: images
-    categories: images
+    categories: stock_images
     shortcut: pixi
     disabled: true
 
@@ -2204,7 +2214,6 @@ engines:
   - name: shopify stock
     engine: shopify_stock
     shortcut: shs
-    disabled: true
 
   - name: sogou
     engine: sogou
@@ -2239,7 +2248,6 @@ engines:
   - name: stocksnap
     engine: stocksnap
     shortcut: sto
-    disabled: true
 
   - name: askubuntu
     engine: stackexchange

@@ -21,7 +21,7 @@ brand:
   docs_url: https://docs.searxng.org/
   public_instances: https://searx.space
   wiki_url: https://github.com/searxng/searxng/wiki
-  issue_url: https://github.com/paulgoio/searxng/issues
+  issue_url: https://github.com/searxng/searxng/issues
   # custom:
   #   # Custom entries in the footer: [title]: [link]
   #   links:
@@ -277,7 +277,7 @@ plugins:
 categories_as_tabs:
   general:
   images:
-  # stock_images:
+  # stock images:
   videos:
   news:
   map:
@@ -426,6 +426,7 @@ engines:
     engine: artic
     shortcut: arc
     timeout: 4.0
+    disabled: true
 
   - name: artstation
     engine: artstation
@@ -730,6 +731,7 @@ engines:
     engine: devicons
     shortcut: di
     timeout: 3.0
+    disabled: true
 
   - name: ddg definitions
     engine: duckduckgo_definitions
@@ -1018,6 +1020,7 @@ engines:
     disabled: true
     shortcut: fl
     engine: flickr_noapi
+    disabled: true
 
   - name: flickr_api
     disabled: true
@@ -1591,6 +1594,7 @@ engines:
     engine: lucide
     shortcut: luc
     timeout: 3.0
+    disabled: true
 
   - name: luxxle
     engine: luxxle
@@ -1953,7 +1957,7 @@ engines:
   - name: pixabay images
     engine: pixabay
     pixabay_type: images
-    categories: stock_images
+    categories: stock images
     shortcut: pixi
     disabled: true
 

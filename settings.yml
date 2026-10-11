@@ -277,7 +277,6 @@ plugins:
 categories_as_tabs:
   general:
   images:
-  # stock images:
   videos:
   news:
   map:
@@ -302,6 +301,7 @@ engines:
   - name: 500px
     engine: 500px
     shortcut: "500"
+    disabled: true
     timeout: 5
 
   - name: 9gag
@@ -426,7 +426,6 @@ engines:
     engine: artic
     shortcut: arc
     timeout: 4.0
-    disabled: true
 
   - name: artstation
     engine: artstation
@@ -731,7 +730,6 @@ engines:
     engine: devicons
     shortcut: di
     timeout: 3.0
-    disabled: true
 
   - name: ddg definitions
     engine: duckduckgo_definitions
@@ -933,6 +931,7 @@ engines:
     engine: www1x
     shortcut: 1x
     timeout: 3.0
+    disabled: true
 
   - name: fastbot
     engine: xpath
@@ -956,35 +955,6 @@ engines:
     engine: fdroid
     shortcut: fd
     disabled: false
-
-  - name: findborg
-    engine: findborg
-    shortcut: fi
-    findborg_categ: search
-    categories: general
-    inactive: true
-
-  - name: findborg images
-    engine: findborg
-    shortcut: fii
-    paging: false
-    findborg_categ: images
-    categories: images
-    inactive: true
-
-  - name: findborg videos
-    engine: findborg
-    shortcut: fiv
-    findborg_categ: videos
-    categories: videos
-    inactive: true
-
-  - name: findborg news
-    engine: findborg
-    shortcut: fin
-    findborg_categ: news
-    categories: news
-    inactive: true
 
   - name: findfiles
     engine: findfiles
@@ -1047,9 +1017,9 @@ engines:
 
   - name: flickr
     disabled: true
+    categories: images
     shortcut: fl
     engine: flickr_noapi
-    disabled: true
 
   - name: flickr_api
     disabled: true
@@ -1257,7 +1227,7 @@ engines:
 
   - name: google play apps
     engine: google_play
-    categories: [it, apps]
+    categories: [files, apps]
     shortcut: gpa
     play_categ: apps
     disabled: true
@@ -1336,11 +1306,6 @@ engines:
       use_official_api: false
       require_api_key: false
       results: JSON
-
-  - name: iconify
-    engine: iconify
-    shortcut: ico
-    disabled: true
 
   - name: iseek
     engine: iseek
@@ -1568,6 +1533,12 @@ engines:
     # https://github.com/searxng/searxng/issues/3610
     inactive: true
 
+  - name: library of congress
+    engine: loc
+    shortcut: loc
+    categories: images
+    disabled: true
+
   - name: libretranslate
     engine: libretranslate
     # https://github.com/LibreTranslate/LibreTranslate?tab=readme-ov-file#mirrors
@@ -1576,25 +1547,6 @@ engines:
     # api_key: ''
     shortcut: lt
     inactive: true
-
-  - name: littlelayer
-    engine: json_engine
-    shortcut: ll
-    categories: [general, blogs]
-    paging: false
-    search_url: https://litterlayer.com/load_results/?q={query}&page={pageno}
-    headers:
-      X-Requested-With: XMLHttpRequest
-    results_query: results
-    url_query: url
-    title_query: title
-    content_query: description
-    disabled: true
-    inactive: true
-    about:
-      website: https://littlelayer.com
-      description: Indie search and bookmarking community
-      results: JSON
 
   - name: lingva
     disabled: true
@@ -1628,7 +1580,6 @@ engines:
     engine: lucide
     shortcut: luc
     timeout: 3.0
-    disabled: true
 
   - name: luxxle
     engine: luxxle
@@ -1949,6 +1900,7 @@ engines:
   - name: picjumbo
     engine: picjumbo
     shortcut: pj
+    disabled: true
 
   - name: pinterest
     engine: pinterest
@@ -1991,7 +1943,7 @@ engines:
   - name: pixabay images
     engine: pixabay
     pixabay_type: images
-    categories: stock images
+    categories: images
     shortcut: pixi
     disabled: true
 
@@ -2252,6 +2204,7 @@ engines:
   - name: shopify stock
     engine: shopify_stock
     shortcut: shs
+    disabled: true
 
   - name: sogou
     engine: sogou
@@ -2286,6 +2239,7 @@ engines:
   - name: stocksnap
     engine: stocksnap
     shortcut: sto
+    disabled: true
 
   - name: askubuntu
     engine: stackexchange
@@ -2883,28 +2837,23 @@ engines:
     shortcut: mjk
     engine: mojeek
     categories: [general, web]
-    # uses a Proof of Work CAPTCHA that requires much computer power to solve
-    inactive: true
+    disabled: true
 
   - name: mojeek images
     shortcut: mjkimg
     engine: mojeek
-    network: mojeek
     categories: [images, web]
     search_type: images
     paging: false
-    # uses a Proof of Work CAPTCHA that requires much computer power to solve
-    inactive: true
+    disabled: true
 
   - name: mojeek news
     shortcut: mjknews
     engine: mojeek
-    network: mojeek
     categories: [news, web]
     search_type: news
     paging: false
-    # uses a Proof of Work CAPTCHA that requires much computer power to solve
-    inactive: true
+    disabled: true
 
   - name: moviepilot
     engine: moviepilot
@@ -3262,28 +3211,6 @@ engines:
       website: https://xonaly.com
       description: "Canadian search engine with its own index"
       results: HTML
-
-  - name: xprivo
-    engine: xprivo
-    shortcut: xpr
-    disabled: true
-    inactive: true
-
-  - name: xprivo news
-    engine: xprivo
-    categories: news
-    xprivo_search_type: news
-    shortcut: xprn
-    disabled: true
-    inactive: true
-
-  - name: xprivo videos
-    engine: xprivo
-    categories: videos
-    xprivo_search_type: videos
-    shortcut: xprv
-    disabled: true
-    inactive: true
 
   - name: zapmeta
     engine: xpath

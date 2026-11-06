@@ -102,7 +102,7 @@ server:
   # If your instance owns a /etc/searxng/settings.yml file, then set the following
   # values there.
 
-  secret_key: "WTAUlIqk3iYvNh93EZYwwWCmI18mYIWN"  # Is overwritten by ${SEARXNG_SECRET}
+  secret_key: "ultrasecretkey"  # Is overwritten by ${SEARXNG_SECRET}
   # Proxy image results through SearXNG. Is overwritten by ${SEARXNG_IMAGE_PROXY}
   image_proxy: false
   # 1.0 and 1.1 are supported
@@ -2171,6 +2171,11 @@ engines:
       use_official_api: false
       require_api_key: false
       results: JSON
+
+  - name: readerfunded
+    engine: readerfunded
+    shortcut: rfd
+    inactive: true
 
   - name: reuters
     engine: reuters

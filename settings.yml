@@ -102,7 +102,7 @@ server:
   # If your instance owns a /etc/searxng/settings.yml file, then set the following
   # values there.
 
-  secret_key: "9KpyRFeMJtHfrmHbAqPkkrnkr3Tx7aZD"  # Is overwritten by ${SEARXNG_SECRET}
+  secret_key: "ultrasecretkey"  # Is overwritten by ${SEARXNG_SECRET}
   # Proxy image results through SearXNG. Is overwritten by ${SEARXNG_IMAGE_PROXY}
   image_proxy: false
   # 1.0 and 1.1 are supported
@@ -457,21 +457,10 @@ engines:
       results: JSON
 
   - name: ayo
-    engine: xpath
-    categories: general
+    engine: ayo
     shortcut: ayo
-    search_url: https://search.ayo.de/search?q={query}
-    results_xpath: //div[contains(@class, 'search-result')]/div
-    url_xpath: .//a/@href
-    title_xpath: .//h3
-    content_xpath: .//p
-    suggestion_xpath: .//a[starts-with(@href, "https://search.ayo.de")]
-    disabled: true
-    about:
-      website: https://search.ayo.de
-      use_official_api: false
-      require_api_key: false
-      results: HTML
+    # behind Anubis CAPTCHA
+    inactive: true
 
   - name: azure
     engine: azure

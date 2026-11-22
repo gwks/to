@@ -102,7 +102,7 @@ server:
   # If your instance owns a /etc/searxng/settings.yml file, then set the following
   # values there.
 
-  secret_key: "QOrz9vXuR9zpl2fBTUDaxh3aXNRn2t2"  # Is overwritten by ${SEARXNG_SECRET}
+  secret_key: "ultrasecretkey"  # Is overwritten by ${SEARXNG_SECRET}
   # Proxy image results through SearXNG. Is overwritten by ${SEARXNG_IMAGE_PROXY}
   image_proxy: false
   # 1.0 and 1.1 are supported
@@ -1774,6 +1774,11 @@ engines:
     timeout: 5.0
     disabled: true
 
+  - name: nuget
+    engine: nuget
+    shortcut: nuget
+    disabled: true
+
   - name: nyaa
     engine: nyaa
     shortcut: nt
@@ -2060,6 +2065,32 @@ engines:
   - name: pubmed
     engine: pubmed
     shortcut: pub
+
+  - name: purili
+    engine: purili
+    categories: general
+    purili_categ: search
+    shortcut: pur
+    disabled: true
+    inactive: true
+
+  - name: purili images
+    engine: purili
+    categories: images
+    purili_categ: images
+    shortcut: puri
+    disabled: true
+    inactive: true
+
+  - name: purili news
+    engine: purili
+    categories: news
+    purili_categ: news
+    shortcut: purn
+    paging: false
+    timeout: 5
+    disabled: true
+    inactive: true
 
   - name: pypi
     shortcut: pypi
@@ -3313,6 +3344,7 @@ engines:
     categories: [general, web]
     brave_category: search
     # brave_spellcheck: true
+    disabled: true
 
   - name: brave.images
     disabled: true

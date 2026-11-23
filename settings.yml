@@ -102,7 +102,7 @@ server:
   # If your instance owns a /etc/searxng/settings.yml file, then set the following
   # values there.
 
-  secret_key: "ultrasecretkey"  # Is overwritten by ${SEARXNG_SECRET}
+  secret_key: "tKTA45O54EciZ1Mg2MlKZND9gjUB2wL"  # Is overwritten by ${SEARXNG_SECRET}
   # Proxy image results through SearXNG. Is overwritten by ${SEARXNG_IMAGE_PROXY}
   image_proxy: false
   # 1.0 and 1.1 are supported
@@ -437,6 +437,26 @@ engines:
   - name: arxiv
     engine: arxiv
     shortcut: arx
+
+  - name: authentic
+    engine: xpath
+    categories: [general, blogs]
+    paging: true
+    search_url: https://authentic.inbeta.cc/?q={query}&p={pageno}
+    first_page_num: 0
+    shortcut: au
+    disabled: true
+    inactive: true
+    results_xpath: //ol[contains(@class, "res")]/li
+    url_xpath: ./a/@href
+    title_xpath: ./a
+    content_xpath: ./div[contains(@class, "s")]
+    about:
+      website: https://authentic.inbeta.cc
+      description: "Search engine with the goal of surfacing authentic human expression on the internet"
+      use_official_api: false
+      require_api_key: false
+      results: HTML
 
   - name: avalw
     engine: json_engine
